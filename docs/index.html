@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Mapping Mobilities</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #fef8ef">
+    <div class="container-fluid p-5 text-center">
+        <h1>Mapping Mobilities</h1>
+        <p>A data journey into Trentino early migration phenomen</p>
+    </div>
+
+    <div class="container mt-5">
+        <!-- Volumi Migrazione -->
+        <div class="row">
+            <div class="col">
+                <h3>I volumi della migrazione</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="destinazioni" style="width:30em;height:25em">
+
+            </div>
+        </div>
+        <!-- Distribuzione -->
+        <div class="row">
+            <div class="col">
+                <h3>Tipologia di migrazione</h3>
+            </div>
+            <div class="col">
+                <h3>I luoghi del Trentino</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="tipomigrazione" style="width:30em;height:25em"></div>
+            <div class="col" id="comunita" style="width:30em;height:25em"></div>
+        </div>
+        <!-- Distribuzione per genere -->
+        <div class="row">
+            <div class="col">
+                <h3>La distribuzione per genere</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="picbar">
+
+            </div>
+            <div class="col" id="sesso" style="width:30em;height:25em">
+
+            </div>
+        </div>
+
+        <!-- Età -->
+        <div class="row">
+            <div class="col">
+                <h3>Età</h3>
+                <h4>a che età si ha ottenuto il passaporto</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="eta" style="width:30em;height:25em">
+
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+<script src="https://unpkg.com/echarts@5.3.3/theme/vintage.js"></script>
+<script type=" text/javascript ">
+    var sessoChart = echarts.init(document.getElementById('sesso'), "vintage", {
+        renderer: 'canvas'
+    });
+    option = {
+        aria: {
+            show: true
+        },
+        title: {},
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            // Try 'horizontal'
+            orient: 'vertical',
+            right: 10,
+            top: 'center'
+        },
+        series: [{
+            type: 'pie',
+            stillShowZeroSum: false,
+            data: [{
+                value: 11622,
+                name: 'uomini'
+            }, {
+                value: 910,
+                name: 'donne'
+            }]
+        }]
+    };
+
+    // Display the chart using the configuration items and data just specified.
+    sessoChart.setOption(option);
+    window.onresize = function() {
+        sessoChart.resize();
+    };
+</script>
+<script type=" text/javascript">
+    var etaChart = echarts.init(document.getElementById('eta'), "vintage");
+    option = {
+        aria: {
+            show: true
+        },
+        title: {},
+        legend: {
+            orient: 'vertical',
+            right: 10,
+            top: 'center'
+        },
+        toolbox: {
+            feature: {
+                dataView: {
+                    readOnly: false
+                },
+                dataZoom: {
+                    yAxisIndex: 'none'
+                },
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        tooltip: {},
+        dataset: {
+            // Provide a set of data.
+            source: [
+                ['eta', 'totale', 'donne', 'uomini'],
+                [0, 82, 8, 74],
+                [1, 1, 0, 1],
+                [2, 1, 1, 0],
+                [3, 1, 0, 1],
+                [4, 1, 0, 1],
+                [5, 2, 0, 2],
+                [6, 6, 0, 6],
+                [7, 3, 0, 3],
+                [9, 4, 1, 3],
+                [10, 7, 1, 6],
+                [11, 11, 1, 10],
+                [12, 29, 0, 29],
+                [13, 46, 1, 45],
+                [14, 124, 10, 114],
+                [15, 161, 12, 149],
+                [16, 243, 25, 218],
+                [17, 396, 19, 377],
+                [18, 528, 23, 505],
+                [19, 551, 30, 521],
+                [20, 608, 39, 569],
+                [21, 508, 41, 467],
+                [22, 467, 36, 431],
+                [23, 492, 51, 441],
+                [24, 497, 45, 452],
+                [25, 482, 33, 449],
+                [26, 473, 40, 433],
+                [27, 403, 28, 375],
+                [28, 392, 35, 357],
+                [29, 298, 27, 271],
+                [30, 322, 25, 297],
+                [31, 297, 26, 271],
+                [32, 285, 20, 265],
+                [33, 275, 20, 255],
+                [34, 222, 20, 202],
+                [35, 207, 12, 195],
+                [36, 192, 17, 175],
+                [37, 234, 17, 217],
+                [38, 197, 9, 188],
+                [39, 201, 18, 183],
+                [40, 179, 13, 166],
+                [41, 185, 14, 171],
+                [42, 171, 12, 159],
+                [43, 165, 13, 152],
+                [44, 180, 15, 165],
+                [45, 158, 12, 146],
+                [46, 133, 5, 128],
+                [47, 129, 8, 121],
+                [48, 155, 7, 148],
+                [49, 127, 9, 118],
+                [50, 123, 15, 108],
+                [51, 119, 12, 107],
+                [52, 128, 10, 118],
+                [53, 111, 4, 107],
+                [54, 103, 6, 97],
+                [55, 91, 11, 80],
+                [56, 88, 6, 82],
+                [57, 72, 2, 70],
+                [58, 70, 6, 64],
+                [59, 44, 1, 43],
+                [60, 58, 3, 55],
+                [61, 43, 4, 39],
+                [62, 47, 4, 43],
+                [63, 34, 2, 32],
+                [64, 29, 2, 27],
+                [65, 27, 1, 26],
+                [66, 25, 1, 24],
+                [67, 24, 2, 22],
+                [68, 13, 2, 11],
+                [69, 19, 1, 18],
+                [70, 19, 19, 0],
+                [71, 23, 3, 20],
+                [72, 10, 1, 9],
+                [73, 6, 1, 5],
+                [74, 7, 1, 6],
+                [75, 6, 0, 6],
+                [76, 6, 1, 5],
+                [77, 2, 0, 2],
+                [78, 3, 0, 3],
+                [79, 1, 0, 1],
+                [81, 3, 0, 3],
+                [83, 2, 0, 2],
+                [86, 1, 0, 1],
+                [87, 2, 0, 2]
+            ]
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {},
+        dataZoom: [{
+            type: 'inside',
+            start: 0,
+            end: 100
+        }, {
+            start: 0,
+            end: 100
+        }],
+        series: [{
+            type: 'line',
+            smooth: true
+        }, {
+            type: 'bar',
+            stack: 'x'
+        }, {
+            type: 'bar',
+            stack: 'x'
+        }]
+    };
+    etaChart.setOption(option);
+    window.onresize = function() {
+        etaChart.resize();
+    };
+</script>
+<script src="js/svg.js"></script>
+
+<script type="text/javascript">
+    var picChart = echarts.init(document.getElementById('picbar'), "vintage");
+    const labelSetting = {
+        show: true,
+        position: 'right',
+        offset: [10, 0],
+        fontSize: 16
+    };
+
+    function makeOption(type, symbol) {
+        return {
+            title: {},
+            legend: {
+                data: ['Femmine', 'Maschi']
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            grid: {
+                containLabel: true,
+                left: 20
+            },
+            yAxis: {
+                data: ['femmine', 'maschi'],
+                inverse: true,
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    margin: 30,
+                    fontSize: 14
+                },
+                axisPointer: {
+                    label: {
+                        show: true,
+                        margin: 30
+                    }
+                }
+            },
+            xAxis: {
+                splitLine: {
+                    show: false
+                },
+                axisLabel: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                }
+            },
+            animationDurationUpdate: 500,
+            series: [{
+                name: 'sesso',
+                id: 'bar1',
+                type: type,
+                label: labelSetting,
+                symbolRepeat: true,
+                symbolSize: ['80%', '60%'],
+                barCategoryGap: '70%',
+                universalTransition: {
+                    enabled: true,
+                    delay: function(idx, total) {
+                        return (idx / total) * 1000;
+                    }
+                },
+                data: [{
+                    value: 910,
+                    symbol: symbol || pathSymbols.girl
+                }, {
+                    value: 11622,
+                    symbol: symbol || pathSymbols.boy
+                }]
+            }]
+        };
+    }
+    const options = [
+        makeOption('pictorialBar'),
+        makeOption('bar'),
+        makeOption('pictorialBar', 'roundRect'),
+        makeOption('pictorialBar', 'circle')
+    ];
+    var optionIndex = 0;
+    option = options[optionIndex];
+    setInterval(function() {
+        optionIndex = (optionIndex + 1) % options.length;
+        picChart.setOption(options[optionIndex]);
+    }, 2500);
+</script>
+<script type="text/javascript">
+    var comunitaChart = echarts.init(document.getElementById('comunita'), 'vintage');
+    ROOT_PATH = "."
+    comunitaChart.showLoading();
+    $.get(ROOT_PATH + '/data/comunita_valle.json', function(trentinoJson) {
+        comunitaChart.hideLoading();
+        echarts.registerMap('TRENTINO', trentinoJson, {
+
+        });
+        option = {
+            title: {},
+            tooltip: {
+                trigger: 'item',
+                showDelay: 1,
+                transitionDuration: 0.3
+            },
+            visualMap: {
+                left: 'left',
+                min: 0.5, //5,
+                max: 30, //3500,
+                inRange: {
+                    color: ['#61a0a8', '#6e7074', '#919e8b']
+                },
+                text: ['Massimo', 'Minimo'],
+                calculable: true
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'left',
+                top: 'top',
+                feature: {
+                    dataView: {
+                        readOnly: false
+                    },
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            series: [{
+                name: '',
+                type: 'map',
+                roam: true,
+                map: 'TRENTINO',
+                emphasis: {
+                    label: {
+                        show: true
+                    }
+                },
+                data: [{
+                    name: 'Giudicarie',
+                    value: 0.10 //12
+                }, {
+                    name: 'Alta Valsugana e Bersntol',
+                    value: 27.98 //3319
+                }, {
+                    name: 'Altopiano della Paganella',
+                    value: 3.30 //301
+                }, {
+                    name: 'Piana Rotaliana',
+                    value: 4.37 //518
+                }, {
+                    name: 'Val di Sole',
+                    value: 0.48 //57
+                }, {
+                    name: 'Vallagarina',
+                    value: 0.28 //33
+                }, {
+                    name: 'Val di Fiemme',
+                    value: 0.08 //9
+                }, {
+                    name: 'Primiero',
+                    value: 0.50 //59
+                }, {
+                    name: 'Val di Cembra',
+                    value: 16.83 //1996
+                }, {
+                    name: 'Valle dei Laghi',
+                    value: 8.81 //1045
+                }, {
+                    name: "Valle delĺ'Adige",
+                    value: 24.62 //2920
+                }, {
+                    name: 'Val di Non',
+                    value: 11.14 //1322
+                }, {
+                    name: 'Valsugana e Tesino',
+                    value: 0.78 //93
+                }, {
+                    name: 'Valle di Cembra',
+                    value: 0.29 // 34
+                }, {
+                    name: 'Altipiani Cimbri',
+                    value: 0.11 //13
+                }, {
+                    name: 'Alto Garda e Ledro',
+                    value: 0.19 //22
+                }, {
+                    name: 'Val di Fassa',
+                    value: 0.16 //19
+                }]
+            }]
+        };
+        comunitaChart.setOption(option);
+        window.addEventListener('resize', comunitaChart.resize);
+
+    });
+</script>
+<script type="text/javascript">
+    var dom = document.getElementById('destinazioni');
+    var destinazioniChart = echarts.init(dom, "vintage", {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+        aria: {
+            show: true
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'line',
+                lineStyle: {
+                    color: 'rgba(0,0,0,0.2)',
+                    width: 1,
+                    type: 'solid'
+                }
+            }
+        },
+        legend: {
+            data: ['africa', 'america', 'asia', 'austria',
+                'austra_ungheria', 'bosnia_erzegovina', 'esteri_europa', 'francia',
+                'germania', 'italia', 'svizzera', 'turchia', 'ungheria'
+            ],
+            orient: 'horizontal'
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            },
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            restore: {},
+            saveAsImage: {}
+        },
+        singleAxis: {
+            //top: 50,
+            //bottom: 50,
+            axisTick: {},
+            axisLabel: {},
+            type: 'time',
+            axisPointer: {
+                animation: true,
+                label: {
+                    show: false
+                }
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    type: 'dashed',
+                    opacity: 0.2
+                }
+            }
+        },
+        series: [{
+            type: 'themeRiver',
+            emphasis: {
+                itemStyle: {
+                    shadowBlur: 10,
+                    shadowColor: 'rgba(0, 0, 0, 0.8)'
+                }
+            },
+            label: {
+                show: false,
+                overflow: 'break',
+            },
+            data: [
+                ['1870', 0, 'africa'],
+                ['1872', 0, 'africa'],
+                ['1874', 0, 'africa'],
+                ['1878', 0, 'africa'],
+                ['1879', 0, 'africa'],
+                ['1880', 0, 'africa'],
+                ['1881', 0, 'africa'],
+                ['1882', 3, 'africa'],
+                ['1883', 0, 'africa'],
+                ['1884', 0, 'africa'],
+                ['1885', 0, 'africa'],
+                ['1886', 0, 'africa'],
+                ['1887', 0, 'africa'],
+                ['1888', 0, 'africa'],
+                ['1889', 7, 'africa'],
+                ['1890', 0, 'africa'],
+                ['1891', 3, 'africa'],
+                ['1892', 0, 'africa'],
+                ['1893', 0, 'africa'],
+                ['1894', 0, 'africa'],
+                ['1895', 0, 'africa'],
+                ['1896', 0, 'africa'],
+                ['1897', 0, 'africa'],
+                ['1898', 0, 'africa'],
+                ['1899', 0, 'africa'],
+                ['1900', 0, 'africa'],
+                ['1909', 0, 'africa'],
+                ['1870', 0, 'america'],
+                ['1872', 0, 'america'],
+                ['1874', 0, 'america'],
+                ['1878', 2, 'america'],
+                ['1879', 10, 'america'],
+                ['1880', 9, 'america'],
+                ['1881', 11, 'america'],
+                ['1882', 52, 'america'],
+                ['1883', 18, 'america'],
+                ['1884', 2, 'america'],
+                ['1885', 6, 'america'],
+                ['1886', 9, 'america'],
+                ['1887', 9, 'america'],
+                ['1888', 59, 'america'],
+                ['1889', 257, 'america'],
+                ['1890', 177, 'america'],
+                ['1891', 147, 'america'],
+                ['1892', 1, 'america'],
+                ['1893', 1, 'america'],
+                ['1894', 0, 'america'],
+                ['1895', 0, 'america'],
+                ['1896', 0, 'america'],
+                ['1897', 0, 'america'],
+                ['1898', 0, 'america'],
+                ['1899', 0, 'america'],
+                ['1900', 0, 'america'],
+                ['1909', 1, 'america'],
+                ['1870', 0, 'asia'],
+                ['1872', 0, 'asia'],
+                ['1874', 0, 'asia'],
+                ['1878', 0, 'asia'],
+                ['1879', 1, 'asia'],
+                ['1880', 0, 'asia'],
+                ['1881', 1, 'asia'],
+                ['1882', 2, 'asia'],
+                ['1883', 0, 'asia'],
+                ['1884', 1, 'asia'],
+                ['1885', 0, 'asia'],
+                ['1886', 1, 'asia'],
+                ['1887', 0, 'asia'],
+                ['1888', 0, 'asia'],
+                ['1889', 7, 'asia'],
+                ['1890', 1, 'asia'],
+                ['1891', 1, 'asia'],
+                ['1892', 0, 'asia'],
+                ['1893', 0, 'asia'],
+                ['1894', 0, 'asia'],
+                ['1895', 0, 'asia'],
+                ['1896', 0, 'asia'],
+                ['1897', 0, 'asia'],
+                ['1898', 0, 'asia'],
+                ['1899', 0, 'asia'],
+                ['1900', 0, 'asia'],
+                ['1909', 0, 'asia'],
+                ['1870', 2, 'austria'],
+                ['1872', 0, 'austria'],
+                ['1874', 0, 'austria'],
+                ['1878', 8, 'austria'],
+                ['1879', 4, 'austria'],
+                ['1880', 6, 'austria'],
+                ['1881', 4, 'austria'],
+                ['1882', 459, 'austria'],
+                ['1883', 99, 'austria'],
+                ['1884', 24, 'austria'],
+                ['1885', 15, 'austria'],
+                ['1886', 10, 'austria'],
+                ['1887', 15, 'austria'],
+                ['1888', 38, 'austria'],
+                ['1889', 354, 'austria'],
+                ['1890', 333, 'austria'],
+                ['1891', 792, 'austria'],
+                ['1892', 1, 'austria'],
+                ['1893', 4, 'austria'],
+                ['1894', 3, 'austria'],
+                ['1895', 1, 'austria'],
+                ['1896', 0, 'austria'],
+                ['1897', 0, 'austria'],
+                ['1898', 1, 'austria'],
+                ['1899', 0, 'austria'],
+                ['1900', 0, 'austria'],
+                ['1909', 0, 'austria'],
+                ['1870', 0, 'austra_ungheria'],
+                ['1872', 0, 'austra_ungheria'],
+                ['1874', 0, 'austra_ungheria'],
+                ['1878', 187, 'austra_ungheria'],
+                ['1879', 121, 'austra_ungheria'],
+                ['1880', 162, 'austra_ungheria'],
+                ['1881', 152, 'austra_ungheria'],
+                ['1882', 570, 'austra_ungheria'],
+                ['1883', 204, 'austra_ungheria'],
+                ['1884', 42, 'austra_ungheria'],
+                ['1885', 46, 'austra_ungheria'],
+                ['1886', 33, 'austra_ungheria'],
+                ['1887', 22, 'austra_ungheria'],
+                ['1888', 234, 'austra_ungheria'],
+                ['1889', 1046, 'austra_ungheria'],
+                ['1890', 655, 'austra_ungheria'],
+                ['1891', 494, 'austra_ungheria'],
+                ['1892', 8, 'austra_ungheria'],
+                ['1893', 8, 'austra_ungheria'],
+                ['1894', 0, 'austra_ungheria'],
+                ['1895', 0, 'austra_ungheria'],
+                ['1896', 2, 'austra_ungheria'],
+                ['1897', 3, 'austra_ungheria'],
+                ['1898', 1, 'austra_ungheria'],
+                ['1899', 3, 'austra_ungheria'],
+                ['1900', 0, 'austra_ungheria'],
+                ['1909', 0, 'austra_ungheria'],
+                ['1870', 0, 'bosnia_erzegovina'],
+                ['1872', 0, 'bosnia_erzegovina'],
+                ['1874', 0, 'bosnia_erzegovina'],
+                ['1878', 53, 'bosnia_erzegovina'],
+                ['1879', 2, 'bosnia_erzegovina'],
+                ['1880', 0, 'bosnia_erzegovina'],
+                ['1881', 2, 'bosnia_erzegovina'],
+                ['1882', 14, 'bosnia_erzegovina'],
+                ['1883', 21, 'bosnia_erzegovina'],
+                ['1884', 1, 'bosnia_erzegovina'],
+                ['1885', 1, 'bosnia_erzegovina'],
+                ['1886', 0, 'bosnia_erzegovina'],
+                ['1887', 0, 'bosnia_erzegovina'],
+                ['1888', 2, 'bosnia_erzegovina'],
+                ['1889', 10, 'bosnia_erzegovina'],
+                ['1890', 4, 'bosnia_erzegovina'],
+                ['1891', 3, 'bosnia_erzegovina'],
+                ['1892', 0, 'bosnia_erzegovina'],
+                ['1893', 0, 'bosnia_erzegovina'],
+                ['1894', 0, 'bosnia_erzegovina'],
+                ['1895', 0, 'bosnia_erzegovina'],
+                ['1896', 0, 'bosnia_erzegovina'],
+                ['1897', 0, 'bosnia_erzegovina'],
+                ['1898', 0, 'bosnia_erzegovina'],
+                ['1899', 0, 'bosnia_erzegovina'],
+                ['1900', 0, 'bosnia_erzegovina'],
+                ['1909', 0, 'bosnia_erzegovina'],
+                ['1870', 0, 'esteri_europa'],
+                ['1872', 0, 'esteri_europa'],
+                ['1874', 0, 'esteri_europa'],
+                ['1878', 5, 'esteri_europa'],
+                ['1879', 0, 'esteri_europa'],
+                ['1880', 12, 'esteri_europa'],
+                ['1881', 27, 'esteri_europa'],
+                ['1882', 11, 'esteri_europa'],
+                ['1883', 6, 'esteri_europa'],
+                ['1884', 4, 'esteri_europa'],
+                ['1885', 0, 'esteri_europa'],
+                ['1886', 0, 'esteri_europa'],
+                ['1887', 7, 'esteri_europa'],
+                ['1888', 9, 'esteri_europa'],
+                ['1889', 159, 'esteri_europa'],
+                ['1890', 13, 'esteri_europa'],
+                ['1891', 4, 'esteri_europa'],
+                ['1892', 0, 'esteri_europa'],
+                ['1893', 1, 'esteri_europa'],
+                ['1894', 0, 'esteri_europa'],
+                ['1895', 0, 'esteri_europa'],
+                ['1896', 0, 'esteri_europa'],
+                ['1897', 0, 'esteri_europa'],
+                ['1898', 0, 'esteri_europa'],
+                ['1899', 0, 'esteri_europa'],
+                ['1900', 0, 'esteri_europa'],
+                ['1909', 1, 'esteri_europa'],
+                ['1870', 0, 'francia'],
+                ['1872', 0, 'francia'],
+                ['1874', 0, 'francia'],
+                ['1878', 10, 'francia'],
+                ['1879', 5, 'francia'],
+                ['1880', 5, 'francia'],
+                ['1881', 6, 'francia'],
+                ['1882', 294, 'francia'],
+                ['1883', 137, 'francia'],
+                ['1884', 3, 'francia'],
+                ['1885', 0, 'francia'],
+                ['1886', 1, 'francia'],
+                ['1887', 2, 'francia'],
+                ['1888', 49, 'francia'],
+                ['1889', 96, 'francia'],
+                ['1890', 43, 'francia'],
+                ['1891', 62, 'francia'],
+                ['1892', 1, 'francia'],
+                ['1893', 0, 'francia'],
+                ['1894', 0, 'francia'],
+                ['1895', 0, 'francia'],
+                ['1896', 0, 'francia'],
+                ['1897', 0, 'francia'],
+                ['1898', 0, 'francia'],
+                ['1899', 0, 'francia'],
+                ['1900', 0, 'francia'],
+                ['1909', 0, 'francia'],
+                ['1870', 2, 'germania'],
+                ['1872', 0, 'germania'],
+                ['1874', 0, 'germania'],
+                ['1878', 70, 'germania'],
+                ['1879', 50, 'germania'],
+                ['1880', 50, 'germania'],
+                ['1881', 46, 'germania'],
+                ['1882', 750, 'germania'],
+                ['1883', 187, 'germania'],
+                ['1884', 12, 'germania'],
+                ['1885', 15, 'germania'],
+                ['1886', 14, 'germania'],
+                ['1887', 5, 'germania'],
+                ['1888', 161, 'germania'],
+                ['1889', 757, 'germania'],
+                ['1890', 307, 'germania'],
+                ['1891', 606, 'germania'],
+                ['1892', 7, 'germania'],
+                ['1893', 4, 'germania'],
+                ['1894', 2, 'germania'],
+                ['1895', 1, 'germania'],
+                ['1896', 0, 'germania'],
+                ['1897', 1, 'germania'],
+                ['1898', 1, 'germania'],
+                ['1899', 1, 'germania'],
+                ['1900', 0, 'germania'],
+                ['1909', 0, 'germania'],
+                ['1870', 0, 'italia'],
+                ['1872', 0, 'italia'],
+                ['1874', 0, 'italia'],
+                ['1878', 67, 'italia'],
+                ['1879', 64, 'italia'],
+                ['1880', 76, 'italia'],
+                ['1881', 56, 'italia'],
+                ['1882', 332, 'italia'],
+                ['1883', 170, 'italia'],
+                ['1884', 33, 'italia'],
+                ['1885', 20, 'italia'],
+                ['1886', 17, 'italia'],
+                ['1887', 24, 'italia'],
+                ['1888', 103, 'italia'],
+                ['1889', 363, 'italia'],
+                ['1890', 141, 'italia'],
+                ['1891', 168, 'italia'],
+                ['1892', 2, 'italia'],
+                ['1893', 1, 'italia'],
+                ['1894', 0, 'italia'],
+                ['1895', 0, 'italia'],
+                ['1896', 0, 'italia'],
+                ['1897', 2, 'italia'],
+                ['1898', 0, 'italia'],
+                ['1899', 0, 'italia'],
+                ['1900', 0, 'italia'],
+                ['1909', 0, 'italia'],
+                ['1870', 0, 'svizzera'],
+                ['1872', 0, 'svizzera'],
+                ['1874', 0, 'svizzera'],
+                ['1878', 12, 'svizzera'],
+                ['1879', 19, 'svizzera'],
+                ['1880', 18, 'svizzera'],
+                ['1881', 17, 'svizzera'],
+                ['1882', 356, 'svizzera'],
+                ['1883', 117, 'svizzera'],
+                ['1884', 6, 'svizzera'],
+                ['1885', 3, 'svizzera'],
+                ['1886', 3, 'svizzera'],
+                ['1887', 1, 'svizzera'],
+                ['1888', 71, 'svizzera'],
+                ['1889', 187, 'svizzera'],
+                ['1890', 65, 'svizzera'],
+                ['1891', 74, 'svizzera'],
+                ['1892', 4, 'svizzera'],
+                ['1893', 1, 'svizzera'],
+                ['1894', 1, 'svizzera'],
+                ['1895', 1, 'svizzera'],
+                ['1896', 0, 'svizzera'],
+                ['1897', 1, 'svizzera'],
+                ['1898', 0, 'svizzera'],
+                ['1899', 1, 'svizzera'],
+                ['1900', 0, 'svizzera'],
+                ['1909', 0, 'svizzera'],
+                ['1870', 0, 'turchia'],
+                ['1872', 0, 'turchia'],
+                ['1874', 0, 'turchia'],
+                ['1878', 0, 'turchia'],
+                ['1879', 0, 'turchia'],
+                ['1880', 0, 'turchia'],
+                ['1881', 0, 'turchia'],
+                ['1882', 5, 'turchia'],
+                ['1883', 6, 'turchia'],
+                ['1884', 0, 'turchia'],
+                ['1885', 0, 'turchia'],
+                ['1886', 0, 'turchia'],
+                ['1887', 0, 'turchia'],
+                ['1888', 0, 'turchia'],
+                ['1889', 0, 'turchia'],
+                ['1890', 2, 'turchia'],
+                ['1891', 3, 'turchia'],
+                ['1892', 0, 'turchia'],
+                ['1893', 0, 'turchia'],
+                ['1894', 0, 'turchia'],
+                ['1895', 0, 'turchia'],
+                ['1896', 0, 'turchia'],
+                ['1897', 0, 'turchia'],
+                ['1898', 0, 'turchia'],
+                ['1899', 0, 'turchia'],
+                ['1900', 0, 'turchia'],
+                ['1909', 0, 'turchia'],
+                ['1870', 0, 'ungheria'],
+                ['1872', 0, 'ungheria'],
+                ['1874', 0, 'ungheria'],
+                ['1878', 0, 'ungheria'],
+                ['1879', 0, 'ungheria'],
+                ['1880', 1, 'ungheria'],
+                ['1881', 0, 'ungheria'],
+                ['1882', 323, 'ungheria'],
+                ['1883', 74, 'ungheria'],
+                ['1884', 0, 'ungheria'],
+                ['1885', 0, 'ungheria'],
+                ['1886', 0, 'ungheria'],
+                ['1887', 0, 'ungheria'],
+                ['1888', 0, 'ungheria'],
+                ['1889', 54, 'ungheria'],
+                ['1890', 24, 'ungheria'],
+                ['1891', 0, 'ungheria'],
+                ['1892', 0, 'ungheria'],
+                ['1893', 2, 'ungheria'],
+                ['1894', 0, 'ungheria'],
+                ['1895', 1, 'ungheria'],
+                ['1896', 0, 'ungheria'],
+                ['1897', 0, 'ungheria'],
+                ['1898', 0, 'ungheria'],
+                ['1899', 0, 'ungheria'],
+                ['1900', 0, 'ungheria'],
+                ['1909', 0, 'ungheria']
+            ]
+        }]
+    };
+
+    if (option && typeof option === 'object') {
+        destinazioniChart.setOption(option);
+    }
+
+    window.addEventListener('resize', destinazioniChart.resize);
+</script>
+<!--
+<script type="text/javascript">
+    var distrodestChart = echarts.init(document.getElementById('distrodestinazioni'), 'vintage');
+    option = {
+
+        title: {
+            text: 'Le destinazioni dei passaporti anno per anno'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data: ['africa', 'america', 'asia', 'austria',
+                'austra_ungheria', 'bosnia_erzegovina', 'esteri_europa', 'francia',
+                'germania', 'italia', 'svizzera', 'turchia', 'ungheria'
+            ]
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            boundaryGap: false,
+            data: [1882, 1889, 1891, 1870, 1872, 1874, 1878, 1879, 1880, 1881, 1883,
+                1884, 1885, 1886, 1887, 1888, 1890, 1892, 1893, 1894, 1895, 1896,
+                1897, 1898, 1899, 1900, 1909
+            ]
+        }],
+        yAxis: [{
+            type: 'value'
+        }],
+        series: [{
+            name: 'africa',
+            type: 'line',
+            stack: 'Total',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 7, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        }, {
+            name: 'america',
+            type: 'line',
+            stack: 'Total',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 2, 10, 9, 11, 52, 18, 2, 6, 9, 9, 59, 257, 177, 147, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+        }, {
+            name: 'asia',
+            type: 'line',
+            stack: 'Total',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 0, 1, 0, 1, 2, 0, 1, 0, 1, 0, 0, 7, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        }, {
+            name: 'austria',
+            type: 'line',
+            stack: 'Total',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [2, 0, 0, 8, 4, 6, 4, 459, 99, 24, 15, 10, 15, 38, 354, 333, 792, 1, 4, 3, 1, 0, 0, 1, 0, 0, 0]
+        }, {
+            name: 'austra_ungheria',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 187, 121, 162, 152, 570, 204, 42, 46, 33, 22, 234, 1046, 655, 494, 8, 8, 0, 0, 2, 3, 1, 3,
+                0, 0
+            ]
+        }, {
+            name: 'bosnia_erzegovina',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 53, 2, 0, 2, 14, 21, 1, 1, 0, 0, 2, 10, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+        }, {
+            name: 'esteri_europa',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 5, 0, 12, 27, 11, 6, 4, 0, 0, 7, 9, 159, 13, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+
+        }, {
+            name: 'francia',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 10, 5, 5, 6, 294, 137, 3, 0, 1, 2, 49, 96, 43, 62, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+        }, {
+            name: 'germania',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [2, 0, 0, 70, 50, 50, 46, 750, 187, 12, 15, 14, 5, 161, 757, 307, 606, 7, 4, 2, 1, 0, 1, 1, 1, 0, 0]
+
+        }, {
+            name: 'italia',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 67, 64, 76, 56, 332, 170, 33, 20, 17, 24, 103, 363, 141, 168, 2, 1, 0, 0, 0, 2, 0, 0, 0, 0]
+
+        }, {
+            name: 'svizzera',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 12, 19, 18, 17, 356, 117, 6, 3, 3, 1, 71, 187, 65, 74, 4, 1, 1, 1, 0, 1, 0, 1, 0, 0]
+
+        }, {
+            name: 'turchia',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 0, 0, 0, 0, 5, 6, 0, 0, 0, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+        }, {
+            name: 'ungheria',
+            type: 'line',
+            stack: 'Total',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [0, 0, 0, 0, 0, 1, 0, 323, 74, 0, 0, 0, 0, 0, 54, 24, 0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0]
+
+        }]
+    };
+    distrodestChart.setOption(option);
+    window.addEventListener('resize', distrodestChart.resize);
+</script>
+-->
+<!--
+<script type="text/javascript">
+    var villagesChart = echarts.init(document.getElementById('villaggi'), 'vintage');
+    var data = [{
+        name: 'Trentino',
+        children: [{
+            name: 'Val di Non',
+            children: [{
+                name: 'Sporminore',
+                value: 123
+            }],
+            name: 'Val di Sole',
+            children: [{
+                name: 'Dimaro',
+                value: 200
+            }],
+            name: 'Alta Valsugana',
+            children: [{
+                name: 'Pergine',
+                value: 300
+            }]
+        }]
+    }];
+    option = {
+        series: {
+            type: 'sunburst',
+            // emphasis: {
+            // focus: 'ancestor'
+            // },
+            data: data,
+            radius: [0, '90%'],
+            label: {
+                rotate: 'radial'
+            }
+        }
+    };
+    villagesChart.setOption(option);
+    window.addEventListener('resize', villagesChart.resize);
+</script>
+-->
+<script type="text/javascript">
+    var radialChart = echarts.init(document.getElementById('tipomigrazione'), 'vintage');
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br />{b} : {c} ({d}%)'
+        },
+        legend: {
+            left: 'center',
+            top: 'bottom',
+            data: [
+                'interna',
+                'europea',
+                'extra europea'
+            ]
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: {
+                    show: true
+                },
+                dataView: {
+                    show: true,
+                    readOnly: false
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        series: [{
+            name: 'tipo di migrazione',
+            type: 'pie',
+            radius: [30, 100],
+            roseType: 'radius',
+            itemStyle: {
+                borderRadius: 5
+            },
+            label: {
+                show: false
+            },
+            emphasis: {
+                label: {
+                    show: true
+                }
+            },
+            data: [{
+                value: 8162,
+                name: 'europea'
+            }, {
+                value: 6257,
+                name: 'interna'
+            }, {
+                value: 802,
+                name: 'extra europea'
+            }, ]
+        }]
+    };
+    radialChart.setOption(option);
+    window.addEventListener('resize', radialChart.resize);
+</script>
+
+</html>
