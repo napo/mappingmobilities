@@ -10,64 +10,112 @@
 </head>
 
 <body style="background-color: #fef8ef">
-    <div class="container-fluid p-5 text-center">
-        <h1>Mapping Mobilities</h1>
-        <p>A data journey into Trentino early migration phenomen</p>
-    </div>
-
+    <nav class="fixed-top navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#volumi">Volumi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tipologia">Tipologia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#genere">Uomini e Donne</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#eta">Età</a>
+                    </li>
+                </ul>
+                <br/><br/>
+            </div>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="container-fluid p-5 text-center">
+            <h1>Mapping Mobilities</h1>
+            <p>A data journey into Trentino early migration phenomen</p>
+        </div>
+    </section>
     <div class="container mt-5">
         <!-- Volumi Migrazione -->
-        <div class="row">
-            <div class="col">
-                <h3>I volumi della migrazione</h3>
+        <br/>
+        <section id="volumi">
+            <div class="row">
+                <div class="col">
+                    <h3>I volumi della migrazione</h3>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col" id="destinazioni" style="width:30em;height:25em">
+            <div class="row">
+                <div class="col" id="destinazioni" style="width:30em;height:25em">
 
+                </div>
             </div>
-        </div>
-        <!-- Distribuzione -->
-        <div class="row">
-            <div class="col">
-                <h3>Tipologia di migrazione</h3>
-            </div>
-            <div class="col">
-                <h3>I luoghi del Trentino</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" id="tipomigrazione" style="width:30em;height:25em"></div>
-            <div class="col" id="comunita" style="width:30em;height:25em"></div>
-        </div>
-        <!-- Distribuzione per genere -->
-        <div class="row">
-            <div class="col">
-                <h3>La distribuzione per genere</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" id="picbar">
+        </section>
 
-            </div>
-            <div class="col" id="sesso" style="width:30em;height:25em">
+        <!-- Tipologia -->
+        <br />
 
+        <section id="tipologia">
+            <div class="row">
+                <div class="col">
+                    <h3>Tipologia di migrazione</h3>
+                </div>
+                <div class="col">
+                    <h3>I luoghi del Trentino</h3>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col" id="tipomigrazione" style="width:30em;height:25em"></div>
+                <div class="col" id="comunita" style="width:30em;height:25em"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Partenze e Destinazioni</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="partenzedestinazioni" style="width:30em;height:25em"></div>
+            </div>
+        </section>
+        <br />
 
+        <section id="genere">
+            <!-- Distribuzione per genere -->
+            <div class="row">
+                <div class="col">
+                    <h3>La distribuzione per genere</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="picbar">
+
+                </div>
+                <div class="col" id="sesso" style="width:30em;height:25em">
+
+                </div>
+            </div>
+        </section>
         <!-- Età -->
-        <div class="row">
-            <div class="col">
-                <h3>Età</h3>
-                <h4>a che età si ha ottenuto il passaporto</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" id="eta" style="width:30em;height:25em">
+        <br />
 
+        <section id="eta">
+            <div class="row">
+                <div class="col">
+                    <h3>Età</h3>
+                    <h4>a che età si ha ottenuto il passaporto</h4>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col" id="eta" style="width:30em;height:25em">
+
+                </div>
+            </div>
     </div>
+    </section>
 </body>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
@@ -255,104 +303,7 @@
     };
 </script>
 <script src="js/svg.js"></script>
-
-<script type="text/javascript">
-    var picChart = echarts.init(document.getElementById('picbar'), "vintage");
-    const labelSetting = {
-        show: true,
-        position: 'right',
-        offset: [10, 0],
-        fontSize: 16
-    };
-
-    function makeOption(type, symbol) {
-        return {
-            title: {},
-            legend: {
-                data: ['Femmine', 'Maschi']
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
-            },
-            grid: {
-                containLabel: true,
-                left: 20
-            },
-            yAxis: {
-                data: ['femmine', 'maschi'],
-                inverse: true,
-                axisLine: {
-                    show: false
-                },
-                axisTick: {
-                    show: false
-                },
-                axisLabel: {
-                    margin: 30,
-                    fontSize: 14
-                },
-                axisPointer: {
-                    label: {
-                        show: true,
-                        margin: 30
-                    }
-                }
-            },
-            xAxis: {
-                splitLine: {
-                    show: false
-                },
-                axisLabel: {
-                    show: false
-                },
-                axisTick: {
-                    show: false
-                },
-                axisLine: {
-                    show: false
-                }
-            },
-            animationDurationUpdate: 500,
-            series: [{
-                name: 'sesso',
-                id: 'bar1',
-                type: type,
-                label: labelSetting,
-                symbolRepeat: true,
-                symbolSize: ['80%', '60%'],
-                barCategoryGap: '70%',
-                universalTransition: {
-                    enabled: true,
-                    delay: function(idx, total) {
-                        return (idx / total) * 1000;
-                    }
-                },
-                data: [{
-                    value: 910,
-                    symbol: symbol || pathSymbols.girl
-                }, {
-                    value: 11622,
-                    symbol: symbol || pathSymbols.boy
-                }]
-            }]
-        };
-    }
-    const options = [
-        makeOption('pictorialBar'),
-        makeOption('bar'),
-        makeOption('pictorialBar', 'roundRect'),
-        makeOption('pictorialBar', 'circle')
-    ];
-    var optionIndex = 0;
-    option = options[optionIndex];
-    setInterval(function() {
-        optionIndex = (optionIndex + 1) % options.length;
-        picChart.setOption(options[optionIndex]);
-    }, 2500);
-</script>
+<script src="js/gender.js"></script>
 <script type="text/javascript">
     var comunitaChart = echarts.init(document.getElementById('comunita'), 'vintage');
     ROOT_PATH = "."
@@ -1154,6 +1105,8 @@
     window.addEventListener('resize', villagesChart.resize);
 </script>
 -->
+<script src="js/partenzedestinazioni.js"></script>
+
 <script type="text/javascript">
     var radialChart = echarts.init(document.getElementById('tipomigrazione'), 'vintage');
     option = {
