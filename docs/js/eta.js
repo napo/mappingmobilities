@@ -1,8 +1,6 @@
-   var etaChart = echarts.init(document.getElementById('eta'), "vintage");
+   console.log("Qui");
+   var etaChart = echarts.init(document.getElementById('etapersone'), "vintage");
    option = {
-       aria: {
-           show: true
-       },
        title: {},
        legend: {
            orient: 'vertical',
@@ -138,3 +136,4 @@
    window.onresize = function() {
        etaChart.resize();
    };
+   console.log("sasasa");
