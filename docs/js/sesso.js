@@ -19,10 +19,10 @@
             type: 'pie',
             stillShowZeroSum: false,
             data: [{
-                value: 11622,
+                value: 11496,
                 name: 'uomini'
             }, {
-                value: 910,
+                value: 908,
                 name: 'donne'
             }]
         }]

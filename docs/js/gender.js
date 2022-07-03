@@ -64,7 +64,7 @@
                 label: labelSetting,
                 symbolRepeat: true,
                 //symbolSize: ['100%', '100%', '100%'],
-                barCategoryGap: '90%',
+                barCategoryGap: '70%',
                 universalTransition: {
                     enabled: true,
                     delay: function(idx, total) {
@@ -72,10 +72,10 @@
                     }
                 },
                 data: [{
-                    value: 910,
+                    value: 908,
                     symbol: symbol || pathSymbols.girl
                 }, {
-                    value: 11622,
+                    value: 11496,
                     symbol: symbol || pathSymbols.boy
                 }]
             }]

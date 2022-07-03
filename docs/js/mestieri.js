@@ -14,7 +14,7 @@
                         '<div class="tooltip-title">' +
                         formatUtil.encodeHTML(treePath.join('/')) +
                         '</div>',
-                        'Disk Usage: ' + formatUtil.addCommas(value) + ' KB'
+                        'total: ' + formatUtil.addCommas(value)
                     ].join('');
                 }
             },

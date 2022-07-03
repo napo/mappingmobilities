@@ -1,5 +1,5 @@
  var comunitaChart = echarts.init(document.getElementById('comunita'), 'vintage');
- ROOT_PATH = "."
+ ROOT_PATH = ".";
  comunitaChart.showLoading();
  $.get(ROOT_PATH + '/data/comunita_valle.json', function(trentinoJson) {
      comunitaChart.hideLoading();
