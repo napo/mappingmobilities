@@ -1,1054 +1,922 @@
 {
     "nodes": [{
             "id": "0",
-            "name": "Asia",
-            "category": 0,
-            "symbolSize": 50.1,
-            "value": 15
-        },
-        {
-            "id": "1",
-            "name": "Europa",
-            "category": 1,
-            "symbolSize": 70.0,
-            "value": 3537
-        },
-        {
-            "id": "2",
-            "name": "Germania",
-            "category": 1,
-            "symbolSize": 67.2,
-            "value": 3047
-        },
-        {
-            "id": "3",
-            "name": "Austria",
-            "category": 2,
-            "symbolSize": 62.2,
-            "value": 2171
-        },
-        {
-            "id": "4",
-            "name": "America",
-            "category": 0,
-            "symbolSize": 54.3,
-            "value": 770
-        },
-        {
-            "id": "5",
-            "name": "Esteri d'Europa",
-            "category": 1,
-            "symbolSize": 51.5,
-            "value": 258
-        },
-        {
-            "id": "6",
-            "name": "Africa",
-            "category": 0,
-            "symbolSize": 50.1,
-            "value": 13
-        },
-        {
-            "id": "7",
-            "name": "Francia",
-            "category": 1,
-            "symbolSize": 54.0,
-            "value": 714
-        },
-        {
-            "id": "8",
-            "name": "Bosnia-Erzegovina",
-            "category": 2,
-            "symbolSize": 50.6,
-            "value": 113
-        },
-        {
-            "id": "9",
-            "name": "Svizzera",
-            "category": 1,
-            "symbolSize": 55.4,
-            "value": 958
-        },
-        {
-            "id": "10",
             "name": "Ungheria",
             "category": 2,
-            "symbolSize": 52.7,
+            "symbolSize": 22.7,
             "value": 479
         },
         {
-            "id": "11",
+            "id": "1",
+            "name": "Germania",
+            "category": 1,
+            "symbolSize": 37.2,
+            "value": 3047
+        },
+        {
+            "id": "2",
+            "name": "Asia",
+            "category": 0,
+            "symbolSize": 20.1,
+            "value": 15
+        },
+        {
+            "id": "3",
+            "name": "Europa",
+            "category": 1,
+            "symbolSize": 40.0,
+            "value": 3537
+        },
+        {
+            "id": "4",
+            "name": "Italia",
+            "category": 1,
+            "symbolSize": 29.2,
+            "value": 1639
+        },
+        {
+            "id": "5",
+            "name": "America",
+            "category": 0,
+            "symbolSize": 24.3,
+            "value": 770
+        },
+        {
+            "id": "6",
+            "name": "Francia",
+            "category": 1,
+            "symbolSize": 24.0,
+            "value": 714
+        },
+        {
+            "id": "7",
+            "name": "Bosnia-Erzegovina",
+            "category": 2,
+            "symbolSize": 20.6,
+            "value": 113
+        },
+        {
+            "id": "8",
             "name": "Austria-Ungheria",
             "category": 2,
-            "symbolSize": 72.5,
+            "symbolSize": 42.5,
             "value": 3993
         },
         {
-            "id": "12",
+            "id": "9",
+            "name": "Austria",
+            "category": 2,
+            "symbolSize": 32.2,
+            "value": 2171
+        },
+        {
+            "id": "10",
+            "name": "Africa",
+            "category": 0,
+            "symbolSize": 20.1,
+            "value": 13
+        },
+        {
+            "id": "11",
             "name": "Turchia",
             "category": 0,
-            "symbolSize": 50.1,
+            "symbolSize": 20.1,
             "value": 16
         },
         {
-            "id": "13",
-            "name": "Italia",
+            "id": "12",
+            "name": "Esteri d'Europa",
             "category": 1,
-            "symbolSize": 59.2,
-            "value": 1639
+            "symbolSize": 21.5,
+            "value": 258
+        },
+        {
+            "id": "13",
+            "name": "Svizzera",
+            "category": 1,
+            "symbolSize": 25.4,
+            "value": 958
         },
         {
             "id": "14",
             "name": "Val di Non",
-            "category": 3,
-            "symbolSize": 61.1,
+            "category": 16,
+            "symbolSize": 31.1,
             "value": 1317
         },
         {
             "id": "15",
             "name": "Valle dei Laghi",
-            "category": 3,
-            "symbolSize": 58.8,
+            "category": 15,
+            "symbolSize": 28.799999999999997,
             "value": 1044
         },
         {
             "id": "16",
             "name": "Alta Valsugana e Bersntol",
-            "category": 3,
-            "symbolSize": 78.0,
+            "category": 19,
+            "symbolSize": 48.0,
             "value": 3305
         },
         {
             "id": "17",
             "name": "Val di Cembra",
-            "category": 3,
-            "symbolSize": 66.9,
+            "category": 17,
+            "symbolSize": 36.900000000000006,
             "value": 1992
         },
         {
             "id": "18",
             "name": "Valle delĺ'Adige",
-            "category": 3,
-            "symbolSize": 74.6,
+            "category": 18,
+            "symbolSize": 44.6,
             "value": 2909
         },
         {
             "id": "19",
             "name": "Piana Rotaliana",
-            "category": 3,
-            "symbolSize": 54.4,
+            "category": 14,
+            "symbolSize": 24.4,
             "value": 518
         },
         {
             "id": "20",
             "name": "Altopiano della Paganella",
-            "category": 3,
-            "symbolSize": 53.3,
+            "category": 13,
+            "symbolSize": 23.3,
             "value": 390
         },
         {
             "id": "21",
             "name": "Alto Garda e Ledro",
-            "category": 3,
-            "symbolSize": 50.2,
+            "category": 7,
+            "symbolSize": 20.2,
             "value": 22
         },
         {
             "id": "22",
             "name": "Valsugana e Tesino",
-            "category": 3,
-            "symbolSize": 50.8,
+            "category": 12,
+            "symbolSize": 20.8,
             "value": 91
         },
         {
             "id": "23",
             "name": "Val di Fiemme",
             "category": 3,
-            "symbolSize": 50.1,
+            "symbolSize": 20.1,
             "value": 8
         },
         {
             "id": "24",
             "name": "Altipiani Cimbri",
-            "category": 3,
-            "symbolSize": 50.1,
+            "category": 5,
+            "symbolSize": 20.1,
             "value": 11
         },
         {
             "id": "25",
             "name": "Val di Sole",
-            "category": 3,
-            "symbolSize": 50.5,
+            "category": 10,
+            "symbolSize": 20.5,
             "value": 56
         },
         {
             "id": "26",
             "name": "Vallagarina",
-            "category": 3,
-            "symbolSize": 50.3,
+            "category": 8,
+            "symbolSize": 20.3,
             "value": 32
         },
         {
             "id": "27",
             "name": "Primiero",
-            "category": 3,
-            "symbolSize": 50.5,
+            "category": 11,
+            "symbolSize": 20.5,
             "value": 58
         },
         {
             "id": "28",
             "name": "Valle di Cembra",
-            "category": 3,
-            "symbolSize": 50.3,
+            "category": 9,
+            "symbolSize": 20.3,
             "value": 34
         },
         {
             "id": "29",
             "name": "Val di Fassa",
-            "category": 3,
-            "symbolSize": 50.2,
+            "category": 6,
+            "symbolSize": 20.2,
             "value": 19
         },
         {
             "id": "30",
             "name": "Giudicarie",
-            "category": 3,
-            "symbolSize": 50.1,
+            "category": 4,
+            "symbolSize": 20.1,
             "value": 12
         }
     ],
     "links": [{
             "source": "23",
-            "target": "3",
-            "value": 2
+            "target": "3"
         },
         {
             "source": "23",
-            "target": "10",
-            "value": 3
+            "target": "10"
         },
         {
             "source": "23",
-            "target": "2",
-            "value": 4
+            "target": "2"
         },
         {
             "source": "23",
-            "target": "12",
-            "value": 2
+            "target": "12"
         },
         {
             "source": "30",
-            "target": "3",
-            "value": 1
+            "target": "3"
         },
         {
             "source": "30",
-            "target": "8",
-            "value": 4
+            "target": "8"
         },
         {
             "source": "30",
-            "target": "10",
-            "value": 3
+            "target": "10"
         },
         {
             "source": "30",
-            "target": "13",
-            "value": 1
+            "target": "13"
         },
         {
             "source": "30",
-            "target": "2",
-            "value": 1
+            "target": "2"
         },
         {
             "source": "30",
-            "target": "12",
-            "value": 6
+            "target": "12"
         },
         {
             "source": "30",
-            "target": "7",
-            "value": 1
+            "target": "7"
         },
         {
             "source": "24",
-            "target": "3",
-            "value": 2
+            "target": "3"
         },
         {
             "source": "24",
-            "target": "8",
-            "value": 1
+            "target": "8"
         },
         {
             "source": "24",
-            "target": "11",
-            "value": 1
+            "target": "11"
         },
         {
             "source": "24",
-            "target": "2",
-            "value": 4
+            "target": "2"
         },
         {
             "source": "24",
-            "target": "12",
-            "value": 2
+            "target": "12"
         },
         {
             "source": "29",
-            "target": "3",
-            "value": 2
+            "target": "3"
         },
         {
             "source": "29",
-            "target": "8",
-            "value": 5
+            "target": "8"
         },
         {
             "source": "29",
-            "target": "10",
-            "value": 6
+            "target": "10"
         },
         {
             "source": "29",
-            "target": "13",
-            "value": 5
+            "target": "13"
         },
         {
             "source": "29",
-            "target": "11",
-            "value": 1
+            "target": "11"
         },
         {
             "source": "29",
-            "target": "2",
-            "value": 3
+            "target": "2"
         },
         {
             "source": "29",
-            "target": "12",
-            "value": 1
+            "target": "12"
         },
         {
             "source": "29",
-            "target": "7",
-            "value": 1
+            "target": "7"
         },
         {
             "source": "21",
-            "target": "3",
-            "value": 2
+            "target": "3"
         },
         {
             "source": "21",
-            "target": "8",
-            "value": 8
+            "target": "8"
         },
         {
             "source": "21",
-            "target": "10",
-            "value": 4
+            "target": "10"
         },
         {
             "source": "21",
-            "target": "13",
-            "value": 6
+            "target": "13"
         },
         {
             "source": "21",
-            "target": "11",
-            "value": 4
+            "target": "11"
         },
         {
             "source": "21",
-            "target": "2",
-            "value": 3
+            "target": "2"
         },
         {
             "source": "21",
-            "target": "12",
-            "value": 8
+            "target": "12"
         },
         {
             "source": "21",
-            "target": "4",
-            "value": 1
+            "target": "4"
         },
         {
             "source": "21",
-            "target": "7",
-            "value": 6
+            "target": "7"
         },
         {
             "source": "26",
-            "target": "3",
-            "value": 2
+            "target": "3"
         },
         {
             "source": "26",
-            "target": "8",
-            "value": 3
+            "target": "8"
         },
         {
             "source": "26",
-            "target": "10",
-            "value": 12
+            "target": "10"
         },
         {
             "source": "26",
-            "target": "13",
-            "value": 4
+            "target": "13"
         },
         {
             "source": "26",
-            "target": "11",
-            "value": 4
+            "target": "11"
         },
         {
             "source": "26",
-            "target": "2",
-            "value": 3
+            "target": "2"
         },
         {
             "source": "26",
-            "target": "12",
-            "value": 13
+            "target": "12"
         },
         {
             "source": "26",
-            "target": "4",
-            "value": 5
+            "target": "4"
         },
         {
             "source": "26",
-            "target": "7",
-            "value": 1
+            "target": "7"
         },
         {
             "source": "28",
-            "target": "3",
-            "value": 7
+            "target": "3"
         },
         {
             "source": "28",
-            "target": "8",
-            "value": 5
+            "target": "8"
         },
         {
             "source": "28",
-            "target": "10",
-            "value": 6
+            "target": "10"
         },
         {
             "source": "28",
-            "target": "13",
-            "value": 13
+            "target": "13"
         },
         {
             "source": "28",
-            "target": "11",
-            "value": 1
+            "target": "11"
         },
         {
             "source": "28",
-            "target": "2",
-            "value": 5
+            "target": "2"
         },
         {
             "source": "28",
-            "target": "7",
-            "value": 1
+            "target": "7"
         },
         {
             "source": "25",
-            "target": "3",
-            "value": 1
+            "target": "3"
         },
         {
             "source": "25",
-            "target": "9",
-            "value": 1
+            "target": "9"
         },
         {
             "source": "25",
-            "target": "8",
-            "value": 6
+            "target": "8"
         },
         {
             "source": "25",
-            "target": "10",
-            "value": 13
+            "target": "10"
         },
         {
             "source": "25",
-            "target": "13",
-            "value": 6
+            "target": "13"
         },
         {
             "source": "25",
-            "target": "2",
-            "value": 8
+            "target": "2"
         },
         {
             "source": "25",
-            "target": "12",
-            "value": 8
+            "target": "12"
         },
         {
             "source": "25",
-            "target": "4",
-            "value": 4
+            "target": "4"
         },
         {
             "source": "25",
-            "target": "7",
-            "value": 5
+            "target": "7"
         },
         {
             "source": "27",
-            "target": "8",
-            "value": 1
+            "target": "8"
         },
         {
             "source": "27",
-            "target": "10",
-            "value": 17
+            "target": "10"
         },
         {
             "source": "27",
-            "target": "13",
-            "value": 3
+            "target": "13"
         },
         {
             "source": "27",
-            "target": "2",
-            "value": 2
+            "target": "2"
         },
         {
             "source": "27",
-            "target": "12",
-            "value": 2
+            "target": "12"
         },
         {
             "source": "27",
-            "target": "4",
-            "value": 1
+            "target": "4"
         },
         {
             "source": "22",
-            "target": "3",
-            "value": 6
+            "target": "3"
         },
         {
             "source": "22",
-            "target": "8",
-            "value": 11
+            "target": "8"
         },
         {
             "source": "22",
-            "target": "10",
-            "value": 29
+            "target": "10"
         },
         {
             "source": "22",
-            "target": "13",
-            "value": 9
+            "target": "13"
         },
         {
             "source": "22",
-            "target": "6",
-            "value": 3
+            "target": "6"
         },
         {
             "source": "22",
-            "target": "11",
-            "value": 4
+            "target": "11"
         },
         {
             "source": "22",
-            "target": "2",
-            "value": 21
+            "target": "2"
         },
         {
             "source": "22",
-            "target": "12",
-            "value": 20
+            "target": "12"
         },
         {
             "source": "22",
-            "target": "4",
-            "value": 6
+            "target": "4"
         },
         {
             "source": "22",
-            "target": "7",
-            "value": 3
+            "target": "7"
         },
         {
             "source": "20",
-            "target": "3",
-            "value": 22
+            "target": "3"
         },
         {
             "source": "20",
-            "target": "8",
-            "value": 81
+            "target": "8"
         },
         {
             "source": "20",
-            "target": "10",
-            "value": 117
+            "target": "10"
         },
         {
             "source": "20",
-            "target": "1",
-            "value": 1
+            "target": "1"
         },
         {
             "source": "20",
-            "target": "13",
-            "value": 129
+            "target": "13"
         },
         {
             "source": "20",
-            "target": "6",
-            "value": 8
+            "target": "6"
         },
         {
             "source": "20",
-            "target": "11",
-            "value": 13
+            "target": "11"
         },
         {
             "source": "20",
-            "target": "2",
-            "value": 69
+            "target": "2"
         },
         {
             "source": "20",
-            "target": "12",
-            "value": 87
+            "target": "12"
         },
         {
             "source": "20",
-            "target": "4",
-            "value": 16
+            "target": "4"
         },
         {
             "source": "20",
-            "target": "7",
-            "value": 13
+            "target": "7"
         },
         {
             "source": "19",
-            "target": "0",
-            "value": 1
+            "target": "0"
         },
         {
             "source": "19",
-            "target": "3",
-            "value": 36
+            "target": "3"
         },
         {
             "source": "19",
-            "target": "9",
-            "value": 1
+            "target": "9"
         },
         {
             "source": "19",
-            "target": "8",
-            "value": 84
+            "target": "8"
         },
         {
             "source": "19",
-            "target": "10",
-            "value": 161
+            "target": "10"
         },
         {
             "source": "19",
-            "target": "1",
-            "value": 6
+            "target": "1"
         },
         {
             "source": "19",
-            "target": "13",
-            "value": 182
+            "target": "13"
         },
         {
             "source": "19",
-            "target": "6",
-            "value": 8
+            "target": "6"
         },
         {
             "source": "19",
-            "target": "11",
-            "value": 34
+            "target": "11"
         },
         {
             "source": "19",
-            "target": "2",
-            "value": 113
+            "target": "2"
         },
         {
             "source": "19",
-            "target": "12",
-            "value": 52
+            "target": "12"
         },
         {
             "source": "19",
-            "target": "4",
-            "value": 53
+            "target": "4"
         },
         {
             "source": "19",
-            "target": "7",
-            "value": 21
+            "target": "7"
         },
         {
             "source": "15",
-            "target": "0",
-            "value": 2
+            "target": "0"
         },
         {
             "source": "15",
-            "target": "3",
-            "value": 79
+            "target": "3"
         },
         {
             "source": "15",
-            "target": "9",
-            "value": 1
+            "target": "9"
         },
         {
             "source": "15",
-            "target": "8",
-            "value": 215
+            "target": "8"
         },
         {
             "source": "15",
-            "target": "10",
-            "value": 302
+            "target": "10"
         },
         {
             "source": "15",
-            "target": "1",
-            "value": 6
+            "target": "1"
         },
         {
             "source": "15",
-            "target": "13",
-            "value": 330
+            "target": "13"
         },
         {
             "source": "15",
-            "target": "6",
-            "value": 21
+            "target": "6"
         },
         {
             "source": "15",
-            "target": "11",
-            "value": 98
+            "target": "11"
         },
         {
             "source": "15",
-            "target": "2",
-            "value": 237
+            "target": "2"
         },
         {
             "source": "15",
-            "target": "12",
-            "value": 200
+            "target": "12"
         },
         {
             "source": "15",
-            "target": "4",
-            "value": 94
+            "target": "4"
         },
         {
             "source": "15",
-            "target": "5",
-            "value": 2
+            "target": "5"
         },
         {
             "source": "15",
-            "target": "7",
-            "value": 68
+            "target": "7"
         },
         {
             "source": "14",
-            "target": "3",
-            "value": 80
+            "target": "3"
         },
         {
             "source": "14",
-            "target": "8",
-            "value": 253
+            "target": "8"
         },
         {
             "source": "14",
-            "target": "10",
-            "value": 357
+            "target": "10"
         },
         {
             "source": "14",
-            "target": "1",
-            "value": 2
+            "target": "1"
         },
         {
             "source": "14",
-            "target": "13",
-            "value": 418
+            "target": "13"
         },
         {
             "source": "14",
-            "target": "6",
-            "value": 29
+            "target": "6"
         },
         {
             "source": "14",
-            "target": "11",
-            "value": 56
+            "target": "11"
         },
         {
             "source": "14",
-            "target": "2",
-            "value": 253
+            "target": "2"
         },
         {
             "source": "14",
-            "target": "12",
-            "value": 222
+            "target": "12"
         },
         {
             "source": "14",
-            "target": "4",
-            "value": 70
+            "target": "4"
         },
         {
             "source": "14",
-            "target": "5",
-            "value": 2
+            "target": "5"
         },
         {
             "source": "14",
-            "target": "7",
-            "value": 56
+            "target": "7"
         },
         {
             "source": "17",
-            "target": "3",
-            "value": 104
+            "target": "3"
         },
         {
             "source": "17",
-            "target": "8",
-            "value": 386
+            "target": "8"
         },
         {
             "source": "17",
-            "target": "10",
-            "value": 587
+            "target": "10"
         },
         {
             "source": "17",
-            "target": "1",
-            "value": 10
+            "target": "1"
         },
         {
             "source": "17",
-            "target": "13",
-            "value": 579
+            "target": "13"
         },
         {
             "source": "17",
-            "target": "6",
-            "value": 28
+            "target": "6"
         },
         {
             "source": "17",
-            "target": "11",
-            "value": 173
+            "target": "11"
         },
         {
             "source": "17",
-            "target": "2",
-            "value": 582
+            "target": "2"
         },
         {
             "source": "17",
-            "target": "12",
-            "value": 147
+            "target": "12"
         },
         {
             "source": "17",
-            "target": "4",
-            "value": 185
+            "target": "4"
         },
         {
             "source": "17",
-            "target": "5",
-            "value": 3
+            "target": "5"
         },
         {
             "source": "17",
-            "target": "7",
-            "value": 100
+            "target": "7"
         },
         {
             "source": "18",
-            "target": "0",
-            "value": 4
+            "target": "0"
         },
         {
             "source": "18",
-            "target": "3",
-            "value": 218
+            "target": "3"
         },
         {
             "source": "18",
-            "target": "9",
-            "value": 7
+            "target": "9"
         },
         {
             "source": "18",
-            "target": "8",
-            "value": 393
+            "target": "8"
         },
         {
             "source": "18",
-            "target": "10",
-            "value": 1208
+            "target": "10"
         },
         {
             "source": "18",
-            "target": "1",
-            "value": 77
+            "target": "1"
         },
         {
             "source": "18",
-            "target": "13",
-            "value": 690
+            "target": "13"
         },
         {
             "source": "18",
-            "target": "6",
-            "value": 105
+            "target": "6"
         },
         {
             "source": "18",
-            "target": "11",
-            "value": 140
+            "target": "11"
         },
         {
             "source": "18",
-            "target": "2",
-            "value": 627
+            "target": "2"
         },
         {
             "source": "18",
-            "target": "12",
-            "value": 572
+            "target": "12"
         },
         {
             "source": "18",
-            "target": "4",
-            "value": 239
+            "target": "4"
         },
         {
             "source": "18",
-            "target": "5",
-            "value": 1
+            "target": "5"
         },
         {
             "source": "18",
-            "target": "7",
-            "value": 67
+            "target": "7"
         },
         {
             "source": "16",
-            "target": "0",
-            "value": 3
+            "target": "0"
         },
         {
             "source": "16",
-            "target": "3",
-            "value": 150
+            "target": "3"
         },
         {
             "source": "16",
-            "target": "9",
-            "value": 3
+            "target": "9"
         },
         {
             "source": "16",
-            "target": "8",
-            "value": 593
+            "target": "8"
         },
         {
             "source": "16",
-            "target": "10",
-            "value": 978
+            "target": "10"
         },
         {
             "source": "16",
-            "target": "1",
-            "value": 7
+            "target": "1"
         },
         {
             "source": "16",
-            "target": "13",
-            "value": 984
+            "target": "13"
         },
         {
             "source": "16",
-            "target": "6",
-            "value": 40
+            "target": "6"
         },
         {
             "source": "16",
-            "target": "11",
-            "value": 146
+            "target": "11"
         },
         {
             "source": "16",
-            "target": "2",
-            "value": 947
+            "target": "2"
         },
         {
             "source": "16",
-            "target": "12",
-            "value": 199
+            "target": "12"
         },
         {
             "source": "16",
-            "target": "4",
-            "value": 234
+            "target": "4"
         },
         {
             "source": "16",
-            "target": "5",
-            "value": 7
+            "target": "5"
         },
         {
             "source": "16",
-            "target": "7",
-            "value": 111
+            "target": "7"
         }
     ],
     "categories": [{
-            "id": "Extra Europa"
+            "name": "Extra Europa"
         },
         {
-            "id": "Europa"
+            "name": "Europa"
         },
         {
-            "id": "Interna"
+            "name": "Interna"
         },
         {
-            "id": "Trentino"
+            "name": "Val di Fiemme"
+        }, {
+            "name": "Giudicarie"
+        }, {
+            "name": "Altipiani Cimbri"
+        }, {
+            "name": "Val di Fassa"
+        }, {
+            "name": "Alto Garda e Ledro"
+        }, {
+            "name": "Vallagarina"
+        }, {
+            "name": "Valle di Cembra"
+        }, {
+            "name": "Val di Sole"
+        }, {
+            "name": "Primiero"
+        }, {
+            "name": "Valsugana e Tesino"
+        }, {
+            "name": "Altopiano della Paganella"
+        }, {
+            "name": "Piana Rotaliana"
+        }, {
+            "name": "Valle dei Laghi"
+        }, {
+            "name": "Val di Non"
+        }, {
+            "name": "Val di Cembra"
+        }, {
+            "name": "Valle delĺ'Adige"
+        }, {
+            "name": "Alta Valsugana e Bersntol"
         }
     ]
 }

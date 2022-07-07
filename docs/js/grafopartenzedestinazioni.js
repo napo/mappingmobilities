@@ -10,22 +10,17 @@ $.getJSON('data/partenze_destinazioni.json', function(graph) {
         };
     });*/
     option = {
-        title: {
-            text: 'Les Miserables',
-            subtext: 'Circular layout',
-            top: 'bottom',
-            left: 'right'
-        },
+        title: {},
         tooltip: {},
         legend: [{
             data: graph.categories.map(function(a) {
                 return a.name;
             })
         }],
-        animationDurationUpdate: 1500,
+        animationDurationUpdate: 6000,
         animationEasingUpdate: 'quinticInOut',
         series: [{
-            name: 'Les Miserables',
+            name: 'passaporti rilasciati',
             type: 'graph',
             layout: 'circular',
             circular: {
@@ -36,20 +31,28 @@ $.getJSON('data/partenze_destinazioni.json', function(graph) {
             categories: graph.categories,
             roam: true,
             label: {
+                show: true,
                 position: 'right',
                 formatter: '{b}'
             },
-            //
-            //lineStyle: {
-            //    color: 'source',
-            //    curveness: 0.3
-            //},
+            lineStyle: {
+                color: 'source',
+                curveness: 0.3
+            },
             emphasis: {
                 focus: 'adjacency',
                 label: {
                     position: 'right',
                     show: true
+                },
+                lineStyle: {
+                    width: 10
                 }
+            },
+            edgeSymbol: ['circle', 'arrow'],
+            edgeSymbolSize: [2, 12],
+            edgeLabel: {
+                fontSize: 10
             }
         }]
     };
